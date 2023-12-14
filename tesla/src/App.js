@@ -6,9 +6,6 @@ import ModelX from "./components/ModelX";
 import ModelS from "./components/ModelY";
 import Navbar from "./components/Navbar";
 import Testovaci from "./components/Testovaci";
-import About from "./components/About";
-import Home from "./components/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
