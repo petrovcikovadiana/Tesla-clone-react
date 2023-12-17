@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tesla/static/css/main.92149b54.css",
-    "main.js": "/tesla/static/js/main.20d67ae4.js",
-    "static/js/787.fc7802c5.chunk.js": "/tesla/static/js/787.fc7802c5.chunk.js",
-    "static/media/Model-Y.mp4": "/tesla/static/media/Model-Y.ed4cd6af6038031c221c.mp4",
-    "static/media/Experience.mp4": "/tesla/static/media/Experience.0a46320f89252260f14b.mp4",
-    "static/media/Model-S.png": "/tesla/static/media/Model-S.9079b6831d45c5b4eba9.png",
-    "static/media/support_hero_desktop.jpg": "/tesla/static/media/support_hero_desktop.90c7639ce2b92b841b91.jpg",
-    "static/media/Model-X.png": "/tesla/static/media/Model-X.eee57209c814ae546e0c.png",
-    "static/media/3.jpg": "/tesla/static/media/3.1688bb7ccfe5ce22bd2d.jpg",
-    "static/media/phone.jpg": "/tesla/static/media/phone.8e25c2a05a3c0d2cc710.jpg",
-    "static/media/access.jpg": "/tesla/static/media/access.a5d00c3f72814c0eebac.jpg",
-    "static/media/getting.avif": "/tesla/static/media/getting.92f8571cdb48b5969347.avif",
-    "static/media/Tesla-Logo.png": "/tesla/static/media/Tesla-Logo.2281e2a7c5ce3280cb52.png",
-    "index.html": "/tesla/index.html",
-    "main.92149b54.css.map": "/tesla/static/css/main.92149b54.css.map",
-    "main.20d67ae4.js.map": "/tesla/static/js/main.20d67ae4.js.map",
-    "787.fc7802c5.chunk.js.map": "/tesla/static/js/787.fc7802c5.chunk.js.map"
+    "main.css": "/tesla-clone-react/static/css/main.92149b54.css",
+    "main.js": "/tesla-clone-react/static/js/main.a0c04dea.js",
+    "static/js/787.fc7802c5.chunk.js": "/tesla-clone-react/static/js/787.fc7802c5.chunk.js",
+    "static/media/Model-Y.mp4": "/tesla-clone-react/static/media/Model-Y.ed4cd6af6038031c221c.mp4",
+    "static/media/Experience.mp4": "/tesla-clone-react/static/media/Experience.0a46320f89252260f14b.mp4",
+    "static/media/Model-S.png": "/tesla-clone-react/static/media/Model-S.9079b6831d45c5b4eba9.png",
+    "static/media/support_hero_desktop.jpg": "/tesla-clone-react/static/media/support_hero_desktop.90c7639ce2b92b841b91.jpg",
+    "static/media/Model-X.png": "/tesla-clone-react/static/media/Model-X.eee57209c814ae546e0c.png",
+    "static/media/3.jpg": "/tesla-clone-react/static/media/3.1688bb7ccfe5ce22bd2d.jpg",
+    "static/media/phone.jpg": "/tesla-clone-react/static/media/phone.8e25c2a05a3c0d2cc710.jpg",
+    "static/media/access.jpg": "/tesla-clone-react/static/media/access.a5d00c3f72814c0eebac.jpg",
+    "static/media/getting.avif": "/tesla-clone-react/static/media/getting.92f8571cdb48b5969347.avif",
+    "static/media/Tesla-Logo.png": "/tesla-clone-react/static/media/Tesla-Logo.2281e2a7c5ce3280cb52.png",
+    "index.html": "/tesla-clone-react/index.html",
+    "main.92149b54.css.map": "/tesla-clone-react/static/css/main.92149b54.css.map",
+    "main.a0c04dea.js.map": "/tesla-clone-react/static/js/main.a0c04dea.js.map",
+    "787.fc7802c5.chunk.js.map": "/tesla-clone-react/static/js/787.fc7802c5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92149b54.css",
-    "static/js/main.20d67ae4.js"
+    "static/js/main.a0c04dea.js"
   ]
 }
