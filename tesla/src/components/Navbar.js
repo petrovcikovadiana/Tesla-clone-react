@@ -13,7 +13,7 @@ import Create from "../Create";
 export default function Navbar() {
   let links = [
     {
-      name: "Vozy",
+      name: "Vozyyy",
       link: "/",
       sublinks: [
         { name: "ModelY", link: "/create", image: "./assets/model-S.png" },
