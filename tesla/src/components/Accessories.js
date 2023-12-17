@@ -14,7 +14,7 @@ function Accessories() {
     >
       <div className="flex flex-col items-center mx-auto pt-20">
         <h1 className="text-4xl">Příslušenství</h1>
-        <button className="bg-opacity-65 border-4 bg-[#f4f4f4]  text-[#171a20] text-sm rounded-md py-2 w-[500px] md:w-[280px] tracking-wider mx-auto mt-[500px]">
+        <button className="bg-opacity-65 border-4 bg-lightWhite  text-[#171a20] text-sm rounded-md py-2 w-[500px] md:w-[280px] tracking-wider mx-auto mt-[500px]">
           Nakupovat
         </button>
         <ul className=" flex-row text-gray-50 text-[13px] gap-5 mt-16 hidden md:flex">
