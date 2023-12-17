@@ -8,11 +8,11 @@ import Navbar from "./components/Navbar";
 import Testovaci from "./components/Testovaci";
 import Create from "./Create";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
