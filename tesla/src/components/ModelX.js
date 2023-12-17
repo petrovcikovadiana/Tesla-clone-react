@@ -20,7 +20,7 @@ function ModelX() {
         <button className="bg-opacity-80 bg-[#171a20] text-white text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
           Objednávka na míru
         </button>
-        <button className=" bg-opacity-65 bg-[#f4f4f4] text-[#171a20]  text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
+        <button className=" bg-opacity-65 bg-lightWhite text-[#171a20]  text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
           Testovací jízda
         </button>
       </div>

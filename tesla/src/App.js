@@ -1,26 +1,40 @@
 import "./App.css";
 import Accessories from "./components/Accessories";
 import Model3 from "./components/Model3";
-import ModelY from "./components/ModelS";
+import ModelY from "./components/ModelY";
 import ModelX from "./components/ModelX";
-import ModelS from "./components/ModelY";
+import ModelS from "./components/ModelS";
 import Navbar from "./components/Navbar";
 import Testovaci from "./components/Testovaci";
+import Create from "./Create";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="snap-y snap-mandatory h-screen w-screen overflow-x-hidden">
+    <div className="">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<Create />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <>
       <Navbar />
 
-      <ModelS />
-      <Model3 />
-
       <ModelY />
-
+      <Model3 />
+      <ModelS />
       <ModelX />
       <Testovaci />
       <Accessories />
-    </div>
+    </>
   );
 }
 

@@ -44,3 +44,9 @@ body.active-modal {
   right: 10px;
   padding: 5px 7px;
 }
+
+@layer base {
+  .h2 {
+    @apply text-xl;
+  }
+}

@@ -10,10 +10,10 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 import Create from "../Create";
 
-export default function Navbar() {
+export default function NavSupport() {
   let links = [
     {
-      name: "Vozy",
+      name: "Model S",
       link: "/",
       sublinks: [
         { name: "ModelY", link: "/create", image: "./assets/model-S.png" },
@@ -23,10 +23,11 @@ export default function Navbar() {
         { name: "Cybertruck", link: "/modelX" },
       ],
     },
-    { name: "Energetická kapacita", link: "/" },
+    { name: "Model 3", link: "/" },
+    { name: "Model X", link: "/" },
+    { name: "Model Y", link: "/" },
+    { name: "Cybertruck", link: "/" },
     { name: "Nabíjení", link: "/" },
-    { name: "Informace", link: "/" },
-    { name: "Obchod", link: "/" },
   ];
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState(false);
@@ -66,7 +67,7 @@ export default function Navbar() {
             >
               <Link
                 to={link.link}
-                className="md:text-lightWhite hover:text-gray-400 duration-500"
+                className="md:text-white hover:text-gray-400 duration-500"
               >
                 {link.name}
               </Link>
@@ -107,16 +108,12 @@ export default function Navbar() {
 
         <div className="md:flex hidden text-lightWhite">
           <Link to="/create">
-            <button className="btn-modal px-5">
-              <AiOutlineQuestionCircle />
-            </button>
+            <button className="btn-modal px-5">Podpora </button>
           </Link>
-          <button className="btn-modal px-5">
-            <AiOutlineGlobal />
-          </button>
+          <button className="btn-modal px-5">Obchod </button>
           <button onClick={toggleModal} className="btn-modal px-5">
             {" "}
-            <AiOutlineUser />
+            Účet{" "}
           </button>{" "}
           {modal && (
             <div className="modal">
@@ -147,7 +144,7 @@ export default function Navbar() {
 
                 <div class="inline-flex items-center justify-center w-full">
                   <hr class="w-64 h-px my-8 bg-gray-100 border-1 " />
-                  <span class="absolute px-3  text-gray-500 -translate-x-1/2 bg-white left-1/2 0">
+                  <span class="absolute px-3  text-gray-500 -translate-x-1/2 bg-lightWhite left-1/2 0">
                     Nebo
                   </span>
                 </div>
