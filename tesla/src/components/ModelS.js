@@ -12,7 +12,7 @@ function ModelS() {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col items-center mx-auto pt-20">
+      <div className="flex flex-col items-center mx-auto pt-32">
         <h1>Model S</h1>
         <p className="text-lg underline">Prozkoumejte skladové vozy</p>
       </div>

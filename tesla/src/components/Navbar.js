@@ -19,7 +19,7 @@ export default function Navbar() {
         { name: "ModelY", link: "/create", image: "./assets/model-S.png" },
         { name: "ModelS", link: "/modelS" },
         { name: "ModelX", link: "/modelX" },
-        { name: "Model3", link: "/modelX" },
+        { name: "Model3", link: "/model3" },
         { name: "Cybertruck", link: "/modelX" },
       ],
     },

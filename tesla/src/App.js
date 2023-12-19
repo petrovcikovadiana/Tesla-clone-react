@@ -7,6 +7,7 @@ import ModelS from "./components/ModelS";
 import Navbar from "./components/Navbar";
 import Testovaci from "./components/Testovaci";
 import Create from "./Create";
+import PageS from "./components/PageS";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/pages" element={<PageS />} />
         </Routes>
       </Router>
     </div>
