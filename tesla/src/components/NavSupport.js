@@ -1,28 +1,13 @@
 import React, { useState } from "react";
-import {
-  AiOutlineQuestionCircle,
-  AiOutlineUser,
-  AiOutlineGlobal,
-  AiOutlineCloseCircle,
-} from "react-icons/ai";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import logo from "../assets/Tesla-Logo.png";
-import Button from "./Button";
 import { Link } from "react-router-dom";
+
 import Create from "../Create";
 
 export default function NavSupport() {
   let links = [
-    {
-      name: "Model S",
-      link: "/",
-      sublinks: [
-        { name: "ModelY", link: "/create", image: "./assets/model-S.png" },
-        { name: "ModelS", link: "/modelS" },
-        { name: "ModelX", link: "/modelX" },
-        { name: "Model3", link: "/modelX" },
-        { name: "Cybertruck", link: "/modelX" },
-      ],
-    },
+    { name: "Model S", link: "/pages" },
     { name: "Model 3", link: "/" },
     { name: "Model X", link: "/" },
     { name: "Model Y", link: "/" },
@@ -67,7 +52,7 @@ export default function NavSupport() {
             >
               <Link
                 to={link.link}
-                className="md:text-white hover:text-gray-400 duration-500"
+                className="md:text-lightWhite  duration-500  backdrop-blur-md"
               >
                 {link.name}
               </Link>
@@ -106,14 +91,18 @@ export default function NavSupport() {
         </ul>
         {/* dropdown menu desktop end */}
 
-        <div className="md:flex hidden text-lightWhite">
+        <div className="md:flex hidden text-lightWhite text-base">
           <Link to="/create">
-            <button className="btn-modal px-5">Podpora </button>
+            <button className=" px-5">Podpora </button>
           </Link>
-          <button className="btn-modal px-5">Obchod </button>
-          <button onClick={toggleModal} className="btn-modal px-5">
+          <button className=" px-5">Obchod </button>
+          <button onClick={toggleModal} className="block px-5">
             {" "}
             Účet{" "}
+          </button>{" "}
+          <button onClick={toggleModal} className=" px-5">
+            {" "}
+            Nabídka{" "}
           </button>{" "}
           {modal && (
             <div className="modal">
