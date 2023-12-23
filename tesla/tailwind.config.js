@@ -18,6 +18,7 @@ module.exports = {
         lightBlack: "#171a20",
         lightWhite: "#f4f4f4",
         secondary: "#5c5e62",
+        lightGray: "#aaabac",
       },
     },
   },

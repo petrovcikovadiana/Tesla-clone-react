@@ -10,6 +10,9 @@ import Create from "./Create";
 import PageS from "./components/PageS";
 
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import PageX from "./components/PageX";
+import Page3 from "./components/Page3";
+import Help from "./components/Help";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
           <Route path="/pages" element={<PageS />} />
+          <Route path="/pagex" element={<PageX />} />
+          <Route path="/page3" element={<Page3 />} />
+          <Route path="/help" element={<Help />} />
         </Routes>
       </Router>
     </div>
