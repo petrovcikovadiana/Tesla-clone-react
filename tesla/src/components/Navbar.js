@@ -12,20 +12,142 @@ import Create from "../Create";
 export default function Navbar() {
   let links = [
     {
-      name: "Vozyyy",
+      name: "Vozy",
       link: "/",
       sublinks: [
-        { name: "ModelY", link: "/create", image: "./assets/model-S.png" },
-        { name: "ModelS", link: "/modelS" },
-        { name: "ModelX", link: "/modelX" },
-        { name: "Model3", link: "/model3" },
-        { name: "Cybertruck", link: "/modelX" },
+        {
+          name: "Model S",
+          link: "/pageS",
+          image: require("../assets/icon-S.png"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+
+        {
+          name: "Model 3",
+          link: "/page3",
+          image: require("../assets/icon-3.avif"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+        {
+          name: "Model X",
+          link: "/pageX",
+          image: require("../assets/icon-X.png"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+        {
+          name: "Model Y",
+          link: "/create",
+          image: require("../assets/icon-Y.png"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+        {
+          name: "Cybertruck",
+          link: "/",
+          image: require("../assets/icon-cyber.png"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+        {
+          name: "Pomozte mi s výběrem",
+          link: "/help",
+          image: require("../assets/blue-red.png"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+      ],
+      text1: "Testovací jízda",
+      text2: "Předem nakonfigurovaná vozidla",
+      text3: "Certifikované ojeté vozy",
+      text4: "Firemní vozidla",
+      text5: "Roadster",
+    },
+    {
+      name: "Energetická kapacita",
+      link: "/",
+      sublinks: [
+        {
+          name: "Powerwall",
+          link: "/powerwall",
+          image: require("../assets/powerwall.png"),
+          additionalTextL: "Více",
+        },
+
+        {
+          name: "Megapack",
+          link: "/megapack",
+          image: require("../assets/megapack.png"),
+
+          additionalTextL: "Více",
+        },
+      ],
+      content1: "Podniky veřejných služeb",
+      content2: "Komerční",
+    },
+    {
+      name: "Nabíjení",
+      link: "/",
+      sublinks: [
+        {
+          name: "Nabíjení",
+          link: "/nabijeni",
+          image: require("../assets/charging.png"),
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+
+        {
+          name: "Domácí nabíjení",
+          link: "/homecharging",
+          image: require("../assets/homecharging.png"),
+
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+        {
+          name: "Supercharging",
+          link: "/supercharging",
+          image: require("../assets/supercharging.png"),
+
+          additionalTextL: "Více",
+          additionalTextR: "Objednat",
+        },
+      ],
+      content3: "Plánovač tras",
+      content4: "Hlasování o stanici Supercharger",
+      content5: "Provozujte Supercharger stanice",
+      content6: "Hostitelské nabíječky Wall Connector",
+    },
+    { name: "Informace", link: "/" },
+    {
+      name: "Obchod",
+      link: "/",
+      sublinks: [
+        {
+          name: "Nabíjení",
+          link: "/nabijeni",
+          image: require("../assets/charging.png"),
+        },
+        {
+          name: "Příslušenství vozidla",
+          link: "/",
+          image: require("../assets/vehicle.png"),
+        },
+        {
+          name: "Oblečení",
+          link: "/",
+          image: require("../assets/hat.png"),
+        },
+        {
+          name: "Životní styl",
+          link: "/nabijeni",
+          image: require("../assets/batoh.png"),
+        },
       ],
     },
-    { name: "Energetická kapacita", link: "/" },
-    { name: "Nabíjení", link: "/" },
-    { name: "Informace", link: "/" },
-    { name: "Obchod", link: "/" },
   ];
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState(false);
@@ -43,9 +165,12 @@ export default function Navbar() {
   return (
     <div className="w-full fixed top-0 left-0 z-30">
       <div className="md:flex items-center justify-between bg-transparent py-4 md:px-10 px-7">
-        <div className="font-bold text-2xxl cursor-pointer flex items-center">
-          <img className="w-[153px] h-[43px]" src={logo} alt="logo" />
+        <div className="font-bold text-2xl cursor-pointer flex items-center">
+          <Link to="/">
+            <img className="w-[153px] h-[43px]" src={logo} alt="logo" />
+          </Link>
         </div>
+        {/* hamburger menu nabídka start */}
         <button
           onClick={() => setOpen(!open)}
           name={open ? "close" : "menu"}
@@ -54,14 +179,16 @@ export default function Navbar() {
           Nabídka
         </button>
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:bg-transparent bg-lightWhite text-gray-500 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
+          className={` md:flex md:items-center md:pb-0 pb-12 absolute md:static md:bg-transparent bg-lightWhite text-gray-500 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
             open ? "top-20" : "top-[-490px]"
           }`}
         >
+          {/* hamburger menu nabídka end */}
+          {/* desktop links start */}
           {links.map((link) => (
             <li
               key={link.name}
-              className="md:ml-8 text-xl md:my-0 my-7 relative group"
+              className="md:pr-6 text-xl md:my-0 my-7 relative group "
             >
               <Link
                 to={link.link}
@@ -70,9 +197,9 @@ export default function Navbar() {
                 {link.name}
               </Link>
               {link.sublinks && (
-                <ul className="hidden absolute w-screen top-full bg-lightWhite text-gray-500 group-hover:block">
+                <ul className="hidden mx-auto items-center justify-center w-[1600px]  bg-lightWhite text-gray-500 group-hover:block p-24 z-10">
                   <div className="flex flex-row">
-                    <div className="flex flex-row gap-5">
+                    <div className="flex flex-wrap gap-5 text-center">
                       {" "}
                       {link.sublinks.map((sublink) => (
                         <li key={sublink.name} className="">
@@ -81,20 +208,41 @@ export default function Navbar() {
                               <img
                                 src={sublink.image}
                                 alt={sublink.name}
-                                className="w-10 h-10"
+                                className="w-[184px] h-[104px]"
                               />
-                              <span>{sublink.name}</span>
+                              <div className="flex flex-col">
+                                <span>{sublink.name}</span>
+                                <span className="text-sm text-secondary">
+                                  <span className="underline">
+                                    {sublink.additionalTextL}
+                                  </span>{" "}
+                                  &nbsp;&nbsp;&nbsp;
+                                  <span className="underline">
+                                    {sublink.additionalTextR}
+                                  </span>
+                                </span>
+                              </div>
                             </div>
                           </Link>
                         </li>
                       ))}
                     </div>
-                    <div>
-                      <li>Testovaci jizda </li>
-                      <li>Předem nakonfigurovaná vozidla </li>
-                      <li>Certifikované ojeté vozy </li>
-                      <li>Firemní vozidla </li>
-                      <li>Roadster </li>
+
+                    {/* desktop links end */}
+
+                    <div className="h-72  border-r border-gray-300  "></div>
+                    <div className="flex flex-col pl-16 text-lightBlack ">
+                      <span className="mb-2">{link.text1}</span>
+                      <span className="mb-2">{link.text2}</span>
+                      <span className="mb-2">{link.text3}</span>
+                      <span className="mb-2">{link.text4}</span>
+                      <span className="mb-2">{link.text5}</span>
+                      <span className="mb-2">{link.content3}</span>
+                      <span className="mb-2">{link.content4}</span>
+                      <span className="mb-2">{link.content5}</span>
+                      <span className="mb-2">{link.content6}</span>
+                      <span className="mb-2">{link.content1}</span>{" "}
+                      <span className="mb-2"> {link.content2}</span>
                     </div>
                   </div>
                 </ul>
@@ -106,14 +254,14 @@ export default function Navbar() {
 
         <div className="md:flex hidden text-lightWhite">
           <Link to="/create">
-            <button className="btn-modal px-5">
+            <button className="btn-modal px-3">
               <AiOutlineQuestionCircle />
             </button>
           </Link>
-          <button className="btn-modal px-5">
+          <button className="btn-modal px-3">
             <AiOutlineGlobal />
           </button>
-          <button onClick={toggleModal} className="btn-modal px-5">
+          <button onClick={toggleModal} className="btn-modal px-3">
             {" "}
             <AiOutlineUser />
           </button>{" "}

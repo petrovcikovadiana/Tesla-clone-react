@@ -8,11 +8,11 @@ import Create from "../Create";
 export default function NavSupport() {
   let links = [
     { name: "Model S", link: "/pages" },
-    { name: "Model 3", link: "/" },
-    { name: "Model X", link: "/" },
-    { name: "Model Y", link: "/" },
-    { name: "Cybertruck", link: "/" },
-    { name: "Nabíjení", link: "/" },
+    { name: "Model 3", link: "/page3" },
+    { name: "Model X", link: "/pagex" },
+    { name: "Model Y", link: "/pagey" },
+    { name: "Cybertruck", link: "/cybertruck" },
+    { name: "Nabíjení", link: "/charging" },
   ];
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState(false);
@@ -31,7 +31,9 @@ export default function NavSupport() {
     <div className="w-full fixed top-0 left-0 z-30">
       <div className="md:flex items-center justify-between bg-transparent py-4 md:px-10 px-7">
         <div className="font-bold text-2xxl cursor-pointer flex items-center">
-          <img className="w-[153px] h-[43px]" src={logo} alt="logo" />
+          <Link to="/">
+            <img className="w-[153px] h-[43px]" src={logo} alt="logo" />
+          </Link>
         </div>
         <button
           onClick={() => setOpen(!open)}
