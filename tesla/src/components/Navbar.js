@@ -7,7 +7,6 @@ import {
 } from "react-icons/ai";
 import logo from "../assets/Tesla-Logo.png";
 import { Link } from "react-router-dom";
-import Create from "../Create";
 
 export default function Navbar() {
   let links = [
@@ -39,14 +38,14 @@ export default function Navbar() {
         },
         {
           name: "Model Y",
-          link: "/create",
+          link: "/pagey",
           image: require("../assets/icon-Y.png"),
           additionalTextL: "Více",
           additionalTextR: "Objednat",
         },
         {
           name: "Cybertruck",
-          link: "/",
+          link: "/cybertruck",
           image: require("../assets/icon-cyber.png"),
           additionalTextL: "Více",
           additionalTextR: "Objednat",
@@ -179,7 +178,7 @@ export default function Navbar() {
           Nabídka
         </button>
         <ul
-          className={` md:flex md:items-center md:pb-0 pb-12 absolute md:static md:bg-transparent bg-lightWhite text-gray-500 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:bg-transparent bg-lightWhite text-gray-500 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
             open ? "top-20" : "top-[-490px]"
           }`}
         >

@@ -4,7 +4,7 @@ import ModelS from "./ModelS";
 
 function ModelY() {
   return (
-    <div className="relative snap-start h-screen flex overflow-hidden">
+    <div className="snap-start h-screen flex overflow-hidden">
       <video
         className="w-full h-full object-cover "
         autoPlay
