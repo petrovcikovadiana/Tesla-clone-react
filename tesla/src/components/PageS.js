@@ -30,6 +30,7 @@ function PageS() {
 
   return (
     <div>
+      {/* hero start */}
       <Navbar />
       <div className="flex flex-col md:flex-row absolute top-[500px] text-center justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite max-w-[1600px]">
         <div>
@@ -63,6 +64,8 @@ function PageS() {
         </p>
       </div>
       <ModelS />
+      {/* hero end */}
+      {/* grid start */}
       <div className="w-screen bg-black h-56    ">
         <p>Interiér budoucnosti</p>
       </div>
@@ -108,6 +111,8 @@ function PageS() {
           </p>
         </div>
       </div>
+      {/* grid end */}
+      {/* plaid start */}
       <div className="relative flex md:flex-col">
         <div>
           <img src={heroS} className="imgS" alt="S" />
@@ -148,6 +153,8 @@ function PageS() {
           </div>
         </div>
       </div>
+      {/* plaid end */}
+      {/* motor start */}
       <div className="bg-gray-200 w-[1600px] h-[1600px]">
         <div className="p-44">
           <h2 className="text-3xl pb-5 ">Elektrický pohon</h2>
@@ -202,6 +209,8 @@ function PageS() {
           </div>
         </div>
       </div>
+      {/* motor end */}
+      {/* exterier start */}
       <div className="relative flex md:flex-col bg-black text-lightWhite">
         <div>
           <img src={heroRed} className="imgS" alt="S" />
@@ -261,6 +270,8 @@ function PageS() {
           <img src={redfront} alt="interior" className="w-[558px] h-[313px]" />
         </div>
       </div>
+      {/* exterier end */}
+      {/* video with content start */}
       <div className="flex flex-row">
         <video
           className="w-3/4 h-full object-cover "
@@ -307,6 +318,8 @@ function PageS() {
             </p>
           </div>
         </div>
+        {/* video with content end */}
+        {/* autopilot start */}
         <img src={autopilot} className="imgS" alt="S" />
         <div className="flex flex-col md:flex-row mx-44 gap-5">
           <div className="py-16 w-96">
@@ -331,6 +344,8 @@ function PageS() {
           </div>
         </div>
       </div>{" "}
+      {/* autopilot end */}
+      {/* final page start */}
       <div className="bg-lightWhite">
         <div className="flex flex-row justify-center items-center h-screen gap-32 px-24">
           <div className="w-1/2">
@@ -351,6 +366,9 @@ function PageS() {
           </div>
           <img src={side} alt="side" className="w-1/2" />
         </div>
+        {/* final page end */}
+
+        {/* footer start */}
         <div className="flex items-center justify-center mx-auto w-[700px] text-center">
           <p className="text-secondary text-sm">
             Některé funkce vozidla, které více využívají data, vyžadují alespoň
@@ -375,6 +393,7 @@ function PageS() {
           </ul>
         </div>
       </div>
+      {/* footer end */}
     </div>
   );
 }

@@ -12,36 +12,40 @@ import PageS from "./components/PageS";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import PageX from "./components/PageX";
 import Page3 from "./components/Page3";
+import Cybertruck from "./components/Cybertruck";
 import Help from "./components/Help";
+import PageY from "./components/PageY";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/pages" element={<PageS />} />
-          <Route path="/pagex" element={<PageX />} />
-          <Route path="/page3" element={<Page3 />} />
-          <Route path="/help" element={<Help />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/pages" element={<PageS />} />
+        <Route path="/pagex" element={<PageX />} />
+        <Route path="/page3" element={<Page3 />} />
+        <Route path="/cybertruck" element={<Cybertruck />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/pagey" element={<PageY />} />
+      </Routes>
+    </Router>
   );
 }
 
 function Home() {
   return (
     <>
-      <Navbar />
+      <div>
+        <Navbar />
 
-      <ModelY />
-      <Model3 />
-      <ModelS />
-      <ModelX />
-      <Testovaci />
-      <Accessories />
+        <ModelY />
+        <Model3 />
+        <ModelS />
+        <ModelX />
+        <Testovaci />
+        <Accessories />
+      </div>
     </>
   );
 }
