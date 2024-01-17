@@ -12,6 +12,7 @@ module.exports = {
       md: "768px",
       lg: "960px",
       xl: "1200px",
+      xxl: "1700px",
     },
     extend: {
       colors: {
@@ -19,6 +20,7 @@ module.exports = {
         lightWhite: "#f4f4f4",
         secondary: "#5c5e62",
         lightGray: "#aaabac",
+        veryLightGray: "#f1f5f9",
       },
     },
   },

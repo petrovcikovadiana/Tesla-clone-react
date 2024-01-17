@@ -9,7 +9,8 @@ function Testovaci() {
         <p className="text-lg underline">
           Naplánujte si testovací jízdu ještě dnes
         </p>
-        <button className="bg-opacity-65 border-4 border-lightWhite bg-transparent text-lightWhite text-sm rounded-md py-2 w-[500px] md:w-[280px] tracking-wider mx-auto mt-96">
+
+        <button className="bg-opacity-65 border-4 border-lightWhite bg-transparent text-lightWhite text-sm rounded-md py-2 w-[500px] md:w-[280px] tracking-wider mx-auto mt-[450px] md:mt-[450px] xl:mt-[450px] xxl:mt-[600px]">
           Testovací jízda
         </button>
       </div>
