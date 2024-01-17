@@ -9,7 +9,7 @@ export default function Create() {
     <div>
       <NavSupport />
       <div className="relative bg-white h-screen">
-        <img src={Img1} alt="house" className="h-[280px] w-[1600px]" />
+        <img src={Img1} alt="house" className="md:h-[280px] md:w-[1600px]" />
         <div className="absolute top-24 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <input
             type="email"
@@ -19,7 +19,7 @@ export default function Create() {
           />
         </div>
         <div>
-          <div className="flex flex-col  justify-center py-24 ">
+          <div className="flex flex-col  justify-center py-24 px-10 ">
             <h2 className="text-4xl  mx-auto ">Oblíbená témata</h2>
             <div className="py-10 mx-auto ">
               <ul className="flex flex-row gap-10">
@@ -31,7 +31,7 @@ export default function Create() {
               </ul>
             </div>
           </div>
-          <div className="flex flex-row gap-36 mx-auto justify-center ">
+          <div className="flex flex-row gap-36 mx-auto justify-center px-10 ">
             <div>
               <h2 className="h2 mb-10">Funkce a nabíjení</h2>
               <p className="text-secondary mb-4">Domácí nabíjení</p>
@@ -112,13 +112,13 @@ export default function Create() {
             </button>
           </div>
         </div>
-        <div className="bg-[#393c41] h-64 text-lightWhite  pt-10">
+        <div className="bg-[#393c41] h-64 text-lightWhite  pt-10 px-10">
           <div className="flex flex-row gap-10  justify-center">
             <div>Vaše nejbližší Prodejna a servisní centrum je Dresden</div>
             <div>
               <p>Lovosice Supercharger</p>
             </div>
-            <div className="flex flex-row gap-7  justify-center">
+            <div className="flex flex-row gap-7  justify-center ">
               <div className=" items-center justify-center">
                 <p>Model S</p>
                 <p>Model 3</p>

@@ -16,7 +16,7 @@ function ModelX() {
         <h1 className="text-5xl mb-2">Model X</h1>
         <p className="text-base underline">Prozkoumejte skladové vozy</p>
       </div>
-      <div className="flex flex-col md:flex-row gap-7 absolute bottom-0 left-0 right-0 top-[600px] justify-center items-center	">
+      <div className="flex flex-col md:flex-row gap-7 absolute bottom-0 left-0 right-0 sm:top-[520px] md:top-[520px] xl:top-[520px] xxl:top-[740px] justify-center items-center	">
         <button className="bg-opacity-80 bg-[#171a20] text-white text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
           Objednávka na míru
         </button>

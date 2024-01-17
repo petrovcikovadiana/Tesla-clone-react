@@ -149,6 +149,7 @@ export default function Navbar() {
     },
   ];
   const [open, setOpen] = useState(false);
+
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -163,12 +164,15 @@ export default function Navbar() {
 
   return (
     <div className="w-full fixed top-0 left-0 z-30">
-      <div className="md:flex items-center justify-between bg-transparent py-4 md:px-10 px-7">
-        <div className="font-bold text-2xl cursor-pointer flex items-center">
+      <div className="md:flex items-center justify-between  bg-transparent py-4 md:px-10 px-7">
+        <div className="font-bold text-2xl cursor-pointer  flex items-center">
+          {/* logo start */}
           <Link to="/">
             <img className="w-[153px] h-[43px]" src={logo} alt="logo" />
           </Link>
         </div>
+        {/* logo end */}
+
         {/* hamburger menu nabídka start */}
         <button
           onClick={() => setOpen(!open)}
@@ -178,8 +182,8 @@ export default function Navbar() {
           Nabídka
         </button>
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:bg-transparent bg-lightWhite text-gray-500 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
-            open ? "top-20" : "top-[-490px]"
+          className={`md:flex md:items-center  md:pb-0 pb-12 absolute md:static md:bg-transparent bg-lightWhite text-gray-500 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
+            open ? "top-20 " : "top-[-490px]"
           }`}
         >
           {/* hamburger menu nabídka end */}
@@ -187,16 +191,16 @@ export default function Navbar() {
           {links.map((link) => (
             <li
               key={link.name}
-              className="md:pr-6 text-xl md:my-0 my-7 relative group "
+              className="md:pr-6 text-xl md:my-0 my-7 relative group  "
             >
               <Link
                 to={link.link}
-                className="md:text-lightWhite hover:text-gray-400 duration-500"
+                className="md:text-lightWhite hover:text-gray-400 duration-500 "
               >
                 {link.name}
               </Link>
               {link.sublinks && (
-                <ul className="hidden mx-auto items-center justify-center w-[1600px]  bg-lightWhite text-gray-500 group-hover:block p-24 z-10">
+                <ul className="hidden absolute w-screen float-left	  bg-lightWhite text-gray-500 group-hover:block p-24 z-50">
                   <div className="flex flex-row">
                     <div className="flex flex-wrap gap-5 text-center">
                       {" "}

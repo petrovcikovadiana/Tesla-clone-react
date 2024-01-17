@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
 body.active-modal {
   overflow-y: hidden;
 }
@@ -63,6 +71,138 @@ body.active-modal {
 .vertical-line {
   border-left: 2px solid #333; /* Adjust the color and thickness as needed */
   height: 30px; /* Adjust the height as needed */
+}
+
+.navbar {
+  overflow: hidden;
+  color: black;
+}
+
+.navbar li {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  z-index: 20;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+
+  margin: 0;
+}
+
+.dropbtn:hover {
+  background-color: #f1f5f9;
+}
+
+.navbar li:hover,
+.dropdown:hover .dropbtn {
+  color: black;
+  z-index: 20;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  animation: mymove 0.5s;
+}
+
+.dropdown-content .header {
+  padding: 16px;
+  color: black;
+  background-color: black;
+  z-index: 40;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  background-color: white;
+  height: 250px;
+}
+
+.column li {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.column li:hover {
+  background-color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.vozy-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+
+  z-index: 50;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 @layer base {

@@ -7,7 +7,7 @@ function ModelS() {
       className="snap-start h-screen w-screen flex text-5xl z-20 "
       style={{
         background: `url(${heroImage})`,
-        backgroundPosition: "top",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
