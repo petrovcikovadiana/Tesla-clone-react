@@ -1,7 +1,5 @@
-import Navbar from "./Navbar";
 import Img5 from "../assets/compositor-8.webp";
 import Img2 from "../assets/ms.avif";
-
 import motor from "../assets/motor.avif";
 import redwheel from "../assets/first.avif";
 import redback from "../assets/second.avif";
@@ -15,7 +13,8 @@ import up from "../assets/up.avif";
 import side from "../assets/icon-S.png";
 import React, { useState, useEffect } from "react";
 import interior from "../assets/interior.webm";
-import ModelX from "./ModelX";
+import modelX from "../assets/Model-X.png";
+import Nav from "./Nav";
 
 function PageX() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,9 +53,9 @@ function PageX() {
 
   return (
     <div>
-      <Navbar />
+      <Nav />
       {/* hero starts */}
-      <div className="flex flex-col md:flex-row absolute top-[430px] text-center justify-center items-center bottom-0 left-0 z-40 right-0 gap-32 text-lightWhite max-w-[1600px]">
+      <div className="flex flex-row absolute md:top-[430px] top-[400px] text-center justify-center items-center bottom-0 left-0 z-40 right-0 md:gap-32 gap-24 text-lightWhite max-w-[1600px] px-10 md:px-0 mx-auto">
         <div>
           <h2 className="text-2xl pb-2">543 km</h2>
           <p className="text-sm">Dojezd (WLTP) </p>
@@ -74,7 +73,28 @@ function PageX() {
           <p className="text-sm">Napájení vozidla </p>
         </div>
       </div>
-      <ModelX />
+      <div
+        className="h-screen w-screen flex text-5xl z-20 relative"
+        style={{
+          background: `url(${modelX})`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-center text-black font-medium tracking-wide z-10 mt-44 ">
+          <h1 className="text-5xl mb-2">Model X</h1>
+          <p className="text-base underline">Prozkoumejte skladové vozy</p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-7 absolute bottom-0 left-0 right-0 sm:top-[620px] md:top-[520px] xl:top-[600px] xxl:top-[740px] justify-center items-center mx-auto	">
+          <button className="bg-opacity-80 bg-[#171a20] text-white text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
+            Objednávka na míru
+          </button>
+          <button className=" bg-opacity-65 bg-lightWhite text-[#171a20]  text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
+            Testovací jízda
+          </button>
+        </div>
+      </div>
       {/* hero end */}
       <div className="w-screen bg-black h-56   ">
         <p>Interiér budoucnosti</p>
@@ -125,7 +145,7 @@ function PageX() {
       </div>
       {/* dots end */}
       {/* gallery start */}
-      <div className="flex flex-row text-lightWhite bg-black px-44 gap-32">
+      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
         <div>
           <img src={Img2} alt="interior" className="w-[558px] h-[313px]" />
         </div>
@@ -137,7 +157,7 @@ function PageX() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black px-44 gap-32 pb-16">
+      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32 pb-16">
         <div className="w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Prostorový zvuk</h2>
           <p>
@@ -152,7 +172,7 @@ function PageX() {
       </div>
       {/* gallery end */}
       {/* hero 2 start */}
-      <div className="relative flex md:flex-col">
+      <div className="relative md:flex md:flex-col hidden">
         <div>
           <img src={modelxx} className="imgS" alt="S" />
           <div className="flex flex-col md:flex-row absolute top-[150px] text-center justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite pb-10">
@@ -197,10 +217,10 @@ function PageX() {
       </div>
       {/* hero 2 end */}
       {/* plaid model start */}
-      <div className="bg-gray-200 w-[1600px] h-[1600px]">
-        <div className="px-44 py-24">
+      <div className="bg-gray-200 md:w-[1600px] md:h-[1600px] py-5">
+        <div className="md:px-44 py-24 px-10">
           <h2 className="text-3xl pb-5 ">Elektrický pohon</h2>
-          <p className="w-[700px] font-light">
+          <p className="md:w-[800px] w-[600px] font-light">
             Platformy vozů Model S sjednocují technologie pohonného ústrojí a
             baterie z cílem zajistit bezkonkurenční výkon, dojezd a efektivitu.
             Přepracovaná tepelná architektura modulu a článku dovoluje rychlejší
@@ -208,8 +228,8 @@ function PageX() {
             podmínkách.
           </p>
         </div>
-        <img src={motor} alt="motor" className="px-12 pb-10" />{" "}
-        <div className="flex flex-col md:flex-row gap-10 px-44">
+        <img src={motor} alt="motor" className="px-12 pb-10 hidden md:block" />{" "}
+        <div className="flex flex-col md:flex-row gap-10 md:px-44 px-10">
           {" "}
           <div className={`w-1/2 ${isGray ? "text-black" : "text-gray-300"}`}>
             <hr className="w-[580px] h-1  my-4 bg-gray-700 border-0 rounded md:my-8 " />
@@ -253,7 +273,7 @@ function PageX() {
       </div>
       {/* plaid model end */}
       {/* gallery start */}
-      <div className="relative flex md:flex-col bg-black text-lightWhite">
+      <div className="relative flex md:flex-col bg-black text-lightWhite hidden md:block">
         <div>
           <img src={zebra} className="imgS" alt="S" />
         </div>{" "}
@@ -280,7 +300,7 @@ function PageX() {
           </div>
         </div>
       </div>{" "}
-      <div className="flex flex-row text-lightWhite bg-black px-44 gap-32">
+      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
         <div className="w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Neúnavný výkon</h2>
           <p>
@@ -292,7 +312,7 @@ function PageX() {
           <img src={redwheel} alt="interior" className="w-[558px] h-[313px]" />
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black px-44 gap-32">
+      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
         <div>
           <img src={redback} alt="interior" className="w-[558px] h-[313px]" />
         </div>
@@ -304,7 +324,7 @@ function PageX() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black px-44 gap-32 pb-16">
+      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32 pb-16">
         <div className="w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Vylepšený styling</h2>
           <p>Kultovní křivky jsou moderní, svěží a elegantní.</p>
@@ -314,22 +334,24 @@ function PageX() {
         </div>
       </div>
       {/* gallery end */}
-      <div className="flex flex-row">
-        <img src={redcar} alt="redcar" className="w-3/4" />
+      {/* cestovani start */}
+      <div className="flex md:flex-row flex-col">
+        <img src={redcar} alt="redcar" className="md:w-3/4" />
 
-        <div className="w-1/4 p-10">
+        <div className="md:w-1/4 p-10">
           <p className="text-lg">Dojezd</p>
           <h1 className="text-2xl pb-5 font-bold">Cestování bez hranic</h1>
-          <p className="text-sm">
+          <p className="text-sm pb-3">
             Díky odhadovanému dojezdu až 634 kilometrů a přístupu k největší a
             nejvýkonnější síti rychlonabíječek na světě strávíte méně času
             nabíjením a více času řízením.
           </p>
-          <button className="mt-[470px] border-4 border-lightBlack px-32 py-1">
+          <button className="md:mt-[470px] border-4 border-lightBlack px-32 py-1">
             Objednat
           </button>
         </div>
       </div>
+      {/* cestovani end */}
       <div className="relative flex md:flex-col bg-lightWhite text-black ">
         <div className="absolute text-lightBlack">
           <div className="p-12">

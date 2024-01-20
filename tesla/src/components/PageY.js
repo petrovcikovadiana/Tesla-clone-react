@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import heroImage from "../assets/desktopy.jpg";
 import structure from "../assets/bocni.jpg";
 import interier from "../assets/interier.avif";
@@ -13,13 +12,14 @@ import wifi from "../assets/wifi.svg";
 import sed from "../assets/sed.svg";
 import eye from "../assets/eye.svg";
 import kufor from "../assets/kufor.svg";
+import Nav from "./Nav";
 
 function PageY() {
   return (
     <div>
       {/* hero start */}
-      <Navbar />
-      <div className="flex flex-col md:flex-row absolute top-[500px] text-center justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite max-w-[1600px]">
+      <Nav />
+      <div className="flex flex-row absolute md:top-[500px] top-[450px] text-center justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite max-w-[1600px] mx-auto">
         <div>
           <h2 className="text-2xl pb-2">2 100 +</h2>
           <p className="text-sm">litrů nákladového prostoru </p>
@@ -42,7 +42,7 @@ function PageY() {
         </button>
       </div>
       <div
-        className="snap-start h-screen w-screen flex text-5xl z-20  "
+        className="h-screen w-screen flex text-5xl z-20  "
         style={{
           background: `url(${heroImage})`,
           backgroundPosition: "bottom",
@@ -57,8 +57,8 @@ function PageY() {
       </div>
       {/* hero end */}
       {/* bezpecnost start */}
-      <div className="flex flex-row">
-        <div className="w-1/4 p-10">
+      <div className="flex md:flex-row flex-col">
+        <div className="md:w-1/4 p-10">
           <p className="text-lg">Bezpečnost</p>
           <h1 className="text-2xl pb-5 font-bold">Navrženo pro bezpečnost</h1>
           <p className="text-sm pb-5">
@@ -77,7 +77,7 @@ function PageY() {
             terénních vozů.
           </p>
           <div className="flex flex-col gap-5 text-sm">
-            <button className="mt-[350px] border-4 border-lightBlack px-32 py-1">
+            <button className="md:mt-[350px] border-4 border-lightBlack px-32 py-1">
               Objednat
             </button>
             <button className=" bg-gray-200 px-16 py-2">
@@ -85,7 +85,7 @@ function PageY() {
             </button>
           </div>
         </div>
-        <img src={structure} alt="structure" className="w-3/4" />
+        <img src={structure} alt="structure" className="md:w-3/4" />
       </div>
       {/* bezpecnost end */}
       {/* utilita start */}
@@ -121,7 +121,7 @@ function PageY() {
             </div>{" "}
           </div>
         </div>
-        <div className="w-1/4 p-10">
+        <div className="w-1/4 p-10 hidden md:block">
           <p className="text-lg">Utilita</p>
           <h1 className="text-2xl pb-5 font-bold">Místo pro všechno</h1>
           <p className="text-sm pb-5">
@@ -146,7 +146,7 @@ function PageY() {
       {/* utilita end */}
       {/* dual motor start */}
       <div className="relative flex md:flex-col">
-        <div>
+        <div className="hidden md:block">
           <img src={back} className="imgS" alt="S" />
           <div className="flex flex-col md:flex-row absolute top-[150px] text-center justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite pb-10 px-64">
             <div>
@@ -229,7 +229,7 @@ function PageY() {
             </div>{" "}
           </div>
         </div>
-        <div className="w-1/4 p-10">
+        <div className="w-1/4 p-10 hidden md:block">
           <p className="text-lg">Dojezd</p>
           <h1 className="text-2xl pb-5 font-bold">Cestování bez hranic</h1>
           <p className="text-sm pb-5">

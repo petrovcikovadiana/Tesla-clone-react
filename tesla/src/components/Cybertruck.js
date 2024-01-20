@@ -5,17 +5,17 @@ import machine from "../assets/machine.png";
 import hero from "../assets/hero.avif";
 import wild from "../assets/wild.avif";
 import men from "../assets/men.avif";
-import Navbar from "./Navbar";
 import cyber from "../assets/cyber.webm";
 import plech from "../assets/plech.mp4";
 import sklo from "../assets/sklo.mp4";
 import prepared from "../assets/prepared.mp4";
 import cyb from "../assets/cyb.svg";
+import Nav from "./Nav";
 
 function Cybertruck() {
   return (
     <div>
-      <Navbar />
+      <Nav />
       {/* hero image start */}
 
       <div
@@ -48,7 +48,7 @@ function Cybertruck() {
       >
         <div className="flex flex-col md:flex-row gap-7 absolute bottom-0 left-0 right-0 top-[600px] justify-center items-center	">
           <div className="">
-            <ul className="flex flex-row gap-10">
+            <ul className="flex flex-row gap-10 px-10">
               <li className="pr-2 pt-2 w-56  border-t-white border-2 border-b-transparent border-l-transparent text-lightWhite">
                 <div className="flex flex-col p-2 bg-black bg-opacity-50 h-[80px]	">
                   <div>
@@ -174,12 +174,12 @@ function Cybertruck() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="flex flex-row   bg-black py-20 px-44 gap-32">
+      <div className="flex md:flex-row flex-col  bg-black py-20 px-44 gap-32">
         <h1 className="uppercase text-4xl text-lightGray">
           VÍCE NEŽ PŘIPRAVENO
         </h1>
         <p
-          className="w-[708px] font-lighter text-sm text-secondary leading-loose
+          className="md:w-[708px] font-lighter text-sm text-secondary leading-loose
 "
         >
           UTÁHNĚTE VŠECHNO, CO POTŘEBUJETE, DÍKY UŽITEČNÉMU ZATÍŽENÍ 1 134 KG A
@@ -201,7 +201,7 @@ function Cybertruck() {
         }}
       >
         {" "}
-        <div className="absolute top-0 left-1/4 transform -translate-x-1/2 text-start p-8  w-[450px] text-lightWhite tracking-wide z-10 mt-44 bg-black bg-opacity-70 rounded-br-3xl border-t-2 border-t-lightWhite ">
+        <div className="absolute top-0 md:left-1/4 transform md:-translate-x-1/2 text-start p-8 md:w-[450px] text-lightWhite tracking-wide z-10 mt-44 bg-black bg-opacity-70 rounded-br-3xl border-t-2 border-t-lightWhite ">
           <h1 className="text-xl uppercase pb-5 font-light">Do divočiny</h1>
           <p className="font-light text-sm leading-loose">
             DOJEĎTE AŽ 547 KM* NA JEDNO NABITÍ — TO BOHATĚ POSTAČÍ NA TO, ABYSTE
@@ -212,7 +212,7 @@ function Cybertruck() {
       </div>
       {/* wild desktop end */}
       {/* left content and right image start */}
-      <div className="flex flex-row px-32 py-32 bg-black">
+      <div className="flex flex-row md:px-32 px-10 py-32 bg-black">
         <div className="w-[400px] pt-20">
           <h2 className="uppercase text-3xl text-lightGray w-56 pb-10">
             ENERGIE VŽDY NA DOSAH RUKY
@@ -224,7 +224,7 @@ function Cybertruck() {
             DOMÁCNOSTI, TAKŽE NEZŮSTANETE BEZ SVĚTLA.
           </p>
         </div>
-        <img src={men} alt="men" className="w-[950px] rounded-bl-3xl" />
+        <img src={men} alt="men" className="md:w-[950px] rounded-bl-3xl" />
       </div>
       {/* left content and right image end */}
       {/* video full start */}
@@ -240,10 +240,10 @@ function Cybertruck() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="flex flex-row   bg-black py-10 px-44 gap-32">
+      <div className="flex md:flex-row flex-col  bg-black py-10 px-44 gap-32">
         <h1 className="uppercase text-4xl text-lightGray">DOPAMINOVÝ DOPING</h1>
         <p
-          className="w-[708px] font-lighter text-sm text-secondary leading-loose
+          className="md:w-[708px] font-lighter text-sm text-secondary leading-loose
 "
         >
           ZRYCHLENÍ Z 0 NA 100 KM/H ZA POUHÝCH 2,7 SEKUNDY† V REŽIMU BEAST MODE
@@ -254,7 +254,7 @@ function Cybertruck() {
       </div>
       {/* video full end */}
       {/* left content and right image start */}
-      <div className="flex flex-row px-32 py-32 bg-black">
+      <div className="flex flex-row md:px-32 px-10 py-32 bg-black">
         <div className="w-[400px] pt-20">
           <h2 className="uppercase text-3xl text-lightGray w-56 pb-10">
             ODOLNÝ ZVENKU, POHODLNÝ UVNITŘ{" "}
@@ -301,8 +301,7 @@ function Cybertruck() {
               <li>Kde nás najdete</li>
             </ul>
           </div>
-                    {/* footer end */}
-
+          {/* footer end */}
         </div>
       </div>
       {/* last image end */}

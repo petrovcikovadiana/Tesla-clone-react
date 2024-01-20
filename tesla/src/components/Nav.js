@@ -330,11 +330,13 @@ export default function Nav() {
           <div className="flex flex-wrap gap-10 px-10 py-14">
             {/* icons S start */}
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={icons}
-                alt="icons"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/pages">
+                <img
+                  src={icons}
+                  alt="icons"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Model S</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
                 <p>Více</p>
@@ -345,11 +347,13 @@ export default function Nav() {
             {/* icons 3 start */}
 
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={icon3}
-                alt="icon3"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/page3">
+                <img
+                  src={icon3}
+                  alt="icon3"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Model 3</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
                 <p>Více</p>
@@ -360,11 +364,13 @@ export default function Nav() {
             {/* icons X start */}
 
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={iconx}
-                alt="iconx"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/pagex">
+                <img
+                  src={iconx}
+                  alt="iconx"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Model X</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
                 <p>Více</p>
@@ -375,11 +381,13 @@ export default function Nav() {
             {/* icons Y start */}
 
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={icony}
-                alt="icony"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/pagey">
+                <img
+                  src={icony}
+                  alt="icony"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Model Y</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
                 <p>Více</p>
@@ -390,11 +398,13 @@ export default function Nav() {
             {/* icons cyber start */}
 
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={iconcy}
-                alt="iconcy"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/cybertruck">
+                <img
+                  src={iconcy}
+                  alt="iconcy"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Cybertruck</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
                 <p>Více</p>
@@ -438,11 +448,13 @@ export default function Nav() {
     <div className="flex w-full top-0 left-0 items-center hover:text-black bg-transparent fixed md:hover:bg-white  z-40 ">
       <div className=" flex  justify-between items-center mx-auto hover:text-black ">
         <div className="dropbtn ">
-          <img
-            src={logo}
-            className=" tesla-logo w-[153px] h-[43px] "
-            alt="logo"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              className=" tesla-logo w-[153px] h-[43px] "
+              alt="logo"
+            />
+          </Link>
         </div>
         {/* hamburger button mobile start */}
         <div className="md:hidden ">
