@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import heroImage from "../assets/tesla33.jpeg";
-import Navbar from "./Navbar";
 import video3 from "../assets/video3.mp4";
 import videoo from "../assets/videoo.mp4";
 import video2 from "../assets/newvideo.mp4";
@@ -14,6 +13,7 @@ import bocni from "../assets/bocni.jpg";
 import sided from "../assets/sided.png";
 import auto from "../assets/auto.jpeg";
 import eye from "../assets/eyes.svg";
+import Nav from "./Nav";
 
 const Page3 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -42,9 +42,9 @@ const Page3 = () => {
 
   return (
     <div>
-      <Navbar />
+      <Nav />
       <div
-        className="snap-start h-screen w-screen flex text-5xl z-20 "
+        className="h-screen w-screen flex text-5xl z-20 "
         style={{
           background: `url(${heroImage})`,
           backgroundPosition: "top",
@@ -54,7 +54,7 @@ const Page3 = () => {
       >
         <div className="flex flex-col items-center mx-auto pt-32">
           <h1 className="text-4xl mb-5">Navrženo pro dlouhý dojezd</h1>
-          <p className="text-lg font-base ">
+          <p className="text-lg font-base px-10 text-center ">
             Ujeďte až 629 km (WLTP) na jedno nabití díky aktualizovanému
             stylingu exteriéru optimalizovanému pro maximální aerodynamiku.
           </p>
@@ -104,8 +104,8 @@ const Page3 = () => {
         </div>
         {/* dots end */}
         {/* content above video start */}
-        <div className="flex flex-col items-center justify-center pt-20 w-[600px] text-center mx-auto">
-          <h2 className="text-lightWhite pb-4 text-3xl">
+        <div className="flex flex-col items-center justify-center pt-20 md:w-[600px] text-center mx-auto">
+          <h2 className="text-lightWhite pb-4 text-3xl ">
             Zbrusu nový interiér
           </h2>
           <p className="text-lightWhite text-sm">
@@ -208,7 +208,7 @@ const Page3 = () => {
       ></div>
       <div>
         <img src={ipad} alt="ipad" className="p-44" />
-        <div className="px-44 flex flex-row  ">
+        <div className="px-44 flex flex-row gap-5 ">
           <h2 className="w-[500px] text-3xl">Elegantní technologie</h2>
           <p className=" text-base">
             Spuštění oblíbené hry nebo přehrávání filmu či skladby je otázkou
@@ -227,7 +227,7 @@ const Page3 = () => {
           <img
             src={iphone3}
             alt="iphone"
-            className="pb-10 w-[356px] h-[660px]"
+            className="pb-10 w-[356px] md:h-[660px]"
           />
           <h2 className="text-xl text-center pb-2">Ovládání</h2>
           <p className="text-center">
@@ -238,7 +238,7 @@ const Page3 = () => {
           <img
             src={iphonedog}
             alt="iphone"
-            className="pb-10 w-[356px] h-[660px]"
+            className="pb-10 w-[356px] md:h-[660px]"
           />
           <h2 className="text-xl text-center pb-2">
             Příprava kabiny vozu před odjezdem
@@ -251,7 +251,7 @@ const Page3 = () => {
           <img
             src={iphonemap}
             alt="iphone"
-            className="pb-10 w-[356px] h-[660px]"
+            className="pb-10 w-[356px] md:h-[660px]"
           />
           <h2 className="text-xl text-center pb-2">Nabíjení</h2>
           <p className="text-center">
@@ -318,11 +318,11 @@ const Page3 = () => {
         <div>
           <img src={bocni} alt="bocni_pohled" className="p-24 z-1" />
         </div>
-        <div className="flex flex-col pl-44">
+        <div className="flex flex-col md:pl-44 px-10">
           <h2 className="text-lightWhite text-3xl pb-3">
             Navrženo pro bezpečnost
           </h2>
-          <p className="text-lightWhite text-sm w-[800px] pb-5">
+          <p className="text-lightWhite text-sm md:w-[800px] pb-5">
             Model 3 využívá stejné prvky, díky kterým jsou naše ostatní vozidla
             tak bezpečná: boční prahy pohlcující energii, zesílený akumulátor
             umístěný nízko ve vozidle, což snižuje riziko převrácení, a kovovou
@@ -350,7 +350,7 @@ const Page3 = () => {
         </div>
       </div>
       <img src={auto} className="imgS" alt="S" />
-      <div className="px-44 py-24 flex flex-row text-lightWhite bg-black">
+      <div className="px-44 py-24 flex flex-row text-lightWhite bg-black gap-5">
         <h2 className="w-[500px] text-3xl">Dorazte svěží</h2>
         <p className=" text-base">
           Za vašeho dozoru umožňuje Autopilot v rámci vašeho pruhu automaticky
