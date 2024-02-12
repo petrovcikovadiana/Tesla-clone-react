@@ -16,10 +16,14 @@ import React, { useState, useEffect } from "react";
 import myVideo from "../assets/range.mp4";
 import Nav from "./Nav";
 import heroImage from "../assets/Model-S.png";
+import Navblack from "./Navblack";
 
 function PageS() {
   const [isGray, setIsGray] = useState(true);
-
+  const handleDivClick = () => {
+    // Toggle the color when the div is clicked
+    setIsGray((prevIsGray) => !prevIsGray);
+  };
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIsGray((prevIsGray) => !prevIsGray);
@@ -32,7 +36,7 @@ function PageS() {
   return (
     <div>
       {/* hero start */}
-      <Nav />
+      <Navblack />
       <div
         className="h-screen w-screen flex text-5xl z-20 "
         style={{
@@ -47,7 +51,7 @@ function PageS() {
           <p className="text-lg underline">Prozkoumejte skladové vozy</p>
         </div>
       </div>
-      <div className="flex flex-row absolute md:top-[500px] top-[400px] text-center justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite max-w-[1600px]">
+      <div className="flex flex-row absolute xxl:top-[600px]  md:top-[500px] top-[400px] px-10 text-center mx-auto justify-center items-center bottom-0 left-0 right-0 gap-16 text-lightWhite max-w-[1600px]">
         <div>
           <h2 className="text-2xl pb-2">600 km</h2>
           <p className="text-sm">Dojezd (WLTP) </p>
@@ -65,7 +69,7 @@ function PageS() {
           <p className="text-sm">Napájení vozidla </p>
         </div>
       </div>
-      <div className="flex flex-row gap-7 px-10 md:px-0 absolute bottom-0 left-0 right-0 md:top-[670px] top-[600px] justify-center items-center	">
+      <div className="flex flex-row gap-7 px-10 md:px-0 absolute bottom-0 left-0 right-0 xxl:top-[750px] md:top-[670px] top-[600px] justify-center items-center	">
         <button className="bg-opacity-80 bg-lightBlack text-white text-base rounded-md py-3 w-[500px] md:w-[300px] tracking-wider">
           Objednat
         </button>
@@ -74,7 +78,7 @@ function PageS() {
         </button>
       </div>
       <div className="w-screen flex justify-center items-center  ">
-        <p className="text-sm text-center text-lightWhite top-[750px] md:top-[780px] absolute mx-auto">
+        <p className="text-sm text-center text-lightWhite top-[750px] lg:top-[780px] xxl:top-[950px]  absolute mx-auto">
           Zobrazené specifikace představují hodnoty pro vůz Model S Plaid.
         </p>
       </div>
@@ -87,11 +91,11 @@ function PageS() {
       <div className="w-screen bg-black h-56    ">
         <p>Interiér budoucnosti</p>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
+      <div className="flex md:flex-row flex-col text-lightWhite bg-black md:px-44 px-10 gap-32 items-center justify-center mx-auto">
         <div>
           <img src={Img2} alt="interior" className="w-[558px] h-[313px]" />
         </div>
-        <div className="w-[530px] items-center justify-center my-auto ">
+        <div className="md:w-[530px] items-center justify-center my-auto">
           <h2 className="mb-4">Zůstaňte připojeni</h2>
           <p>
             Můžete přes Bluetooth bleskově připojit více zařízení nebo rychle
@@ -99,8 +103,8 @@ function PageS() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
-        <div className="w-[530px] items-center justify-center my-auto ">
+      <div className="flex md:flex-row flex-col text-lightWhite bg-black md:px-44 px-10 gap-32 items-center justify-center mx-auto">
+        <div className="md:w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Prostorový zvuk</h2>
           <p>
             Audiosystém s 22 reproduktory a výkonem 960 wattů s technologií
@@ -112,11 +116,11 @@ function PageS() {
           <img src={Img3} alt="interior" className="w-[558px] h-[313px]" />
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32 pb-24">
+      <div className="flex md:flex-row flex-col text-lightWhite bg-black md:px-44 px-10 gap-32 pb-24 pt-10 items-center justify-center mx-auto">
         <div>
           <img src={Img4} alt="interior" className="w-[558px] h-[313px]" />
         </div>
-        <div className="w-[530px] items-center justify-center my-auto ">
+        <div className="md:w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Prostor pro všechno</h2>
           <p>
             Se zavazadlovým prostorem vpředu i vzadu a plně sklopnými sedadly
@@ -145,7 +149,7 @@ function PageS() {
             </div>
           </div>
         </div>{" "}
-        <div className="flex flex-col md:flex-row mx-44 gap-5">
+        <div className="flex flex-col md:flex-row gap-5 mx-auto md:pl-12 ">
           <div className="py-16 w-96">
             <p>Plaid</p>
             <h1 className="text-3xl pb-6">Více než Ludicrous</h1>
@@ -153,7 +157,7 @@ function PageS() {
               <button className=" border-4 border-lightBlack  h-12 w-[250px] rounded-md text-sm">
                 Objednat
               </button>
-              <button className=" border-4 bg-gray-200 px-4  h-12 w-[250px] rounded-md text-sm">
+              <button className=" border-4 bg-gray-200 px-4 h-12 w-[250px] rounded-md text-sm">
                 Prozkoumejte skladové vozy
               </button>
             </div>
@@ -169,7 +173,7 @@ function PageS() {
       </div>
       {/* plaid end */}
       {/* motor start */}
-      <div className="bg-gray-200 md:w-[1600px] md:h-[1600px] py-5 md:py-0">
+      <div className="md:w-screen md:h-[1600px] py-5 md:py-0 mx-auto">
         <div className="md:p-44 px-10">
           <h2 className="text-3xl pb-5 ">Elektrický pohon</h2>
           <p className="md:w-[700px]">
@@ -183,7 +187,12 @@ function PageS() {
         <img src={motor} alt="motor" className="px-12 pb-10 hidden md:block" />{" "}
         <div className="flex flex-col md:flex-row gap-10 md:px-44 px-10">
           {" "}
-          <div className={`w-1/2 ${isGray ? "text-black" : "text-gray-300"}`}>
+          <div
+            onClick={handleDivClick}
+            className={`w-1/2 cursor-pointer ${
+              isGray ? "text-black" : "text-gray-300"
+            }`}
+          >
             <hr className="w-[580px] h-1  my-4 bg-gray-700 border-0 rounded md:my-8 " />
             <h2 className="text-xl font-bold pb-4">Model S</h2>
             <p className="pb-5">
@@ -202,7 +211,12 @@ function PageS() {
               </div>
             </div>
           </div>
-          <div className={`w-1/2  ${isGray ? "text-gray-300" : "text-black"}`}>
+          <div
+            onClick={handleDivClick}
+            className={`w-1/2 cursor-pointer ${
+              isGray ? "text-gray-300" : "text-black"
+            }`}
+          >
             <hr class="w-[580px] h-1  my-4 bg-gray-700 border-0 rounded md:my-8 " />
             <h2 className="text-xl font-bold pb-4">Model S Plaid</h2>
             <p className="pb-5">
@@ -225,11 +239,11 @@ function PageS() {
       </div>
       {/* motor end */}
       {/* exterier start */}
-      <div className="relative flex md:flex-col bg-black text-lightWhite">
+      <div className="relative flex flex-col bg-black text-lightWhite">
         <div>
           <img src={heroRed} className="imgS " alt="S" />
         </div>{" "}
-        <div className="flex flex-col md:flex-row mx-44  gap-5">
+        <div className="flex flex-col md:flex-row mx-auto items-center justify-center px-10 gap-5">
           <div className="py-16 w-96">
             <p>Exteriér</p>
             <h1 className="text-3xl pb-6">Navržen s důrazem na efektivitu</h1>
@@ -251,8 +265,8 @@ function PageS() {
           </div>
         </div>
       </div>{" "}
-      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
-        <div className="w-[530px] items-center justify-center my-auto ">
+      <div className="flex md:flex-row flex-col text-lightWhite bg-black md:px-44 px-10 gap-32 mx-auto justify-center">
+        <div className="md:w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Neúnavný výkon</h2>
           <p>
             Poměrová kola a pneumatiky zaměřené na výkon zajišťují lepší
@@ -263,11 +277,11 @@ function PageS() {
           <img src={redwheel} alt="interior" className="w-[558px] h-[313px]" />
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
+      <div className="flex md:flex-row flex-col text-lightWhite bg-black md:px-44 px-10 gap-32 mx-auto justify-center pt-10">
         <div>
           <img src={redback} alt="interior" className="w-[558px] h-[313px]" />
         </div>
-        <div className="w-[530px] items-center justify-center my-auto ">
+        <div className="md:w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Optimalizovaná aerodynamika</h2>
           <p>
             Důraz na detail na všech exteriérových površích dělá z Model S
@@ -275,8 +289,8 @@ function PageS() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row text-lightWhite bg-black md:px-44 px-10 gap-32">
-        <div className="w-[530px] items-center justify-center my-auto ">
+      <div className="flex md:flex-row flex-col text-lightWhite bg-black md:px-44 px-10 gap-32 mx-auto justify-center">
+        <div className="md:w-[530px] items-center justify-center my-auto ">
           <h2 className="mb-4">Vylepšený styling</h2>
           <p>Kultovní křivky jsou moderní, svěží a elegantní.</p>
         </div>
@@ -305,7 +319,7 @@ function PageS() {
             nejvýkonnější síti rychlonabíječek na světě strávíte méně času
             nabíjením a více času řízením.
           </p>
-          <button className="mt-[470px] border-4 border-lightBlack px-32 py-1">
+          <button className="md:mt-[470px] xxl:mt-[100px] border-4 border-lightBlack px-32 py-1 ">
             Objednat
           </button>
         </div>
@@ -361,7 +375,7 @@ function PageS() {
       {/* autopilot end */}
       {/* final page start */}
       <div className="bg-lightWhite">
-        <div className="flex flex-row justify-center items-center h-screen gap-32 px-24">
+        <div className="flex flex-row justify-center items-center md:h-screen gap-32 px-24 py-10">
           <div className="w-1/2">
             {" "}
             <h1 className=" text-3xl pb-5">Model S</h1>
@@ -383,7 +397,7 @@ function PageS() {
         {/* final page end */}
 
         {/* footer start */}
-        <div className="flex items-center justify-center mx-auto w-[700px] px-10 md:px-0 pb-3 text-center">
+        <div className="flex items-center justify-center mx-auto md:w-[700px] px-10 md:px-0 pb-3 text-center">
           <p className="text-secondary text-sm">
             Některé funkce vozidla, které více využívají data, vyžadují alespoň
             standardní konektivitu. Patří k nim mapy, navigace a hlasové

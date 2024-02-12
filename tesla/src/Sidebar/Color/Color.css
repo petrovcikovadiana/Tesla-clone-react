@@ -1,0 +1,55 @@
+.sidebar-label-container-color {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sidebar-label-container-color input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmarkColor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  border: solid black 1px;
+}
+
+.all {
+  background: linear-gradient(blue, crimson);
+}
+
+.sidebar-label-container-color input:checked ~ .checkmarkColor {
+  background-color: #f1f5f9;
+}
+
+.checkmarkColor:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.sidebar-label-container-color input:checked ~ .checkmarkColor:after {
+  display: block;
+}
+
+.sidebar-label-container-color .checkmarkColor:after {
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: black;
+}
