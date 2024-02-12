@@ -22,6 +22,9 @@ module.exports = {
         lightGray: "#aaabac",
         veryLightGray: "#f1f5f9",
       },
+      backgroundImage: {
+        mapa: "url('./assets/map.avif')",
+      },
     },
   },
   plugins: [],

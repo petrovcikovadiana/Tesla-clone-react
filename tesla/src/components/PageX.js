@@ -15,6 +15,7 @@ import React, { useState, useEffect } from "react";
 import interior from "../assets/interior.webm";
 import modelX from "../assets/Model-X.png";
 import Nav from "./Nav";
+import Navblack from "./Navblack";
 
 function PageX() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,7 +54,7 @@ function PageX() {
 
   return (
     <div>
-      <Nav />
+      <Navblack />
       {/* hero starts */}
       <div className="flex flex-row absolute md:top-[430px] top-[400px] text-center justify-center items-center bottom-0 left-0 z-40 right-0 md:gap-32 gap-24 text-lightWhite max-w-[1600px] px-10 md:px-0 mx-auto">
         <div>

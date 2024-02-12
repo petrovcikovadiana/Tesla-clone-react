@@ -148,15 +148,33 @@ export default function Nav() {
           </div>
         </div>
         <div className="pl-10 font-base text-xl text-black pt-10">
-          <p className="pb-8 ">Testovaci jízda</p>
-          <p className="pb-8">Příběhy zákazníků</p>{" "}
-          <p className="pb-8 ">Události</p>
-          <p className="pb-8 ">Videoprůvodci</p>
-          <p className="pb-8 ">Kde nás najdete</p>
-          <p className="pb-8 ">Plánovač tras</p>
-          <p className="pb-8 ">Najít certifikovaného instalačního technika</p>
-          <p className="pb-8 ">Najít opravnu karosérií</p>
-          <p className="pb-8 ">Vice informací</p>
+          <Link to="/jizda">
+            <p className="pb-8 ">Testovaci jízda</p>
+          </Link>
+          <Link to="/pribehy">
+            <p className="pb-8">Příběhy zákazníků</p>{" "}
+          </Link>
+          <Link to="/udalosti">
+            <p className="pb-8 ">Události</p>
+          </Link>
+          <Link to="/videopruvodci">
+            <p className="pb-8 ">Videoprůvodci</p>
+          </Link>
+          <Link to="/find">
+            <p className="pb-8 ">Kde nás najdete</p>
+          </Link>
+          <Link to="/trasa">
+            <p className="pb-8 ">Plánovač tras</p>
+          </Link>
+          <Link to="/technik">
+            <p className="pb-8 ">Najít certifikovaného instalačního technika</p>
+          </Link>
+          <Link to="/karoserie">
+            <p className="pb-8 ">Najít opravnu karosérií</p>
+          </Link>
+          <Link to="/info">
+            <p className="pb-8 ">Vice informací</p>
+          </Link>
           <p className="pb-8 ">Kariéra</p>
           <p className="pb-8 ">Investoři</p>
         </div>
@@ -191,13 +209,17 @@ export default function Nav() {
           <div className="flex flex-wrap gap-10 px-5 py-14">
             {/* charging start */}
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={charging}
-                alt="charging"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/charging">
+                <img
+                  src={charging}
+                  alt="charging"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Charging</h3>
-              <p className="underline text-secondary">Více</p>
+              <Link to="/charging">
+                <p className="underline text-secondary">Více</p>
+              </Link>
             </div>
             {/* charging end */}
             {/* homecharging start */}
@@ -210,7 +232,9 @@ export default function Nav() {
               />
               <h3 className="font-medium text-xl">Homecharging</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
-                <p>Více</p>
+                <Link to="/homecharging">
+                  <p>Více</p>
+                </Link>
                 <p>Obchod</p>
               </div>
             </div>
@@ -225,15 +249,21 @@ export default function Nav() {
               />
               <h3 className="font-medium text-xl">Supercharging</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
-                <p>Více</p>
-                <p>Najít</p>
+                <Link to="/supercharging">
+                  <p>Více</p>
+                </Link>
+                <Link to="/find">
+                  <p>Najít</p>
+                </Link>
               </div>
             </div>
             {/* supercharging end */}
           </div>
           <hr class="border-1 border-slate-300 mx-10  " />
           <div className="pl-10 font-base text-xl text-black">
-            <p className="pb-8 pt-8">Plánovač tras</p>
+            <Link to="/trasa">
+              <p className="pb-8 pt-8">Plánovač tras</p>
+            </Link>
             <p className="pb-8">Hlasování o stanici Supercharger</p>{" "}
             <p className="pb-8 ">Provozujte Supercharger stanice</p>
             <p className="pb-8 ">Hostitelské nabíječky Wall Connector</p>
@@ -270,25 +300,33 @@ export default function Nav() {
           <div className="flex flex-wrap gap-10 px-10 py-14">
             {/* powerwall start */}
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={powerwall}
-                alt="powerwall"
-                className="w-[184px] h-[103px] items-center"
-              />
+              <Link to="/powerwall">
+                <img
+                  src={powerwall}
+                  alt="powerwall"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
               <h3 className="font-medium text-xl">Powerwall</h3>
-              <p>Více</p>
+              <Link to="/powerwall">
+                <p>Více</p>
+              </Link>
             </div>
             {/* powerwall end */}
             {/* megapack start */}
 
             <div className="flex flex-col gap-2 items-center">
-              <img
-                src={megapack}
-                alt="megapack"
-                className="w-[184px] h-[103px] items-center"
-              />
-              <h3 className="font-medium text-xl">Megapack</h3>
-              <p>Více</p>
+              <Link to="/megapack">
+                <img
+                  src={megapack}
+                  alt="megapack"
+                  className="w-[184px] h-[103px] items-center"
+                />
+              </Link>
+              <Link to="/megapack">
+                <h3 className="font-medium text-xl">Megapack</h3>
+                <p>Více</p>
+              </Link>
             </div>
             {/* megapack end */}
           </div>
@@ -339,7 +377,9 @@ export default function Nav() {
               </Link>
               <h3 className="font-medium text-xl">Model S</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
-                <p>Více</p>
+                <Link to="/pageS">
+                  <p>Více</p>
+                </Link>
                 <p>Objednat</p>
               </div>
             </div>
@@ -356,7 +396,9 @@ export default function Nav() {
               </Link>
               <h3 className="font-medium text-xl">Model 3</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
-                <p>Více</p>
+                <Link to="/page3">
+                  <p>Více</p>
+                </Link>
                 <p>Objednat</p>
               </div>
             </div>
@@ -373,7 +415,9 @@ export default function Nav() {
               </Link>
               <h3 className="font-medium text-xl">Model X</h3>
               <div className="flex flex-row gap-5 underline text-secondary">
-                <p>Více</p>
+                <Link to="/pageX">
+                  <p>Více</p>
+                </Link>
                 <p>Objednat</p>
               </div>
             </div>
@@ -432,7 +476,9 @@ export default function Nav() {
           </div>
           <hr class="border-1 border-slate-300 mx-10  " />
           <div className="pl-10 font-base text-xl text-black">
-            <p className="pb-8 pt-8">Testovací jízda</p>
+            <Link to="/jizda">
+              <p className="pb-8 pt-8">Testovací jízda</p>
+            </Link>
             <p className="pb-8">Předem nakonfigurovaná vozidla</p>
             <p className="pb-8">Certifikované ojeté vozy</p>
             <p className="pb-8">Firemní vozidla</p>
@@ -446,7 +492,7 @@ export default function Nav() {
 
   return (
     <div className="flex w-full top-0 left-0 items-center hover:text-black bg-transparent fixed md:hover:bg-white  z-40 ">
-      <div className=" flex  justify-between items-center mx-auto hover:text-black ">
+      <div className=" flex  justify-between items-center mx-auto hover:text-black md:px-10">
         <div className="dropbtn ">
           <Link to="/">
             <img
@@ -478,7 +524,7 @@ export default function Nav() {
         )}
         {mobileMenuOpen && <MobileModalContent />}
 
-        <div className="md:flex hidden hover:text-black text-white text-base items-center justify-center w-[1200px] ">
+        <div className="md:flex hidden hover:text-black text-white text-base items-center justify-center lg:w-[1380px] xxl:w-[2600px] ">
           <div className="dropdown z-30 transition ">
             <button className="dropbtn   ">Vozy</button>
             <div className="dropdown-content px-44 py-16 ">
@@ -494,8 +540,12 @@ export default function Nav() {
                   </Link>
                   <li className="items-center text-xl">Model S</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
-                    <p>Objednat</p>
+                    <Link to="/pageS">
+                      <p>Více</p>
+                    </Link>
+                    <Link to="/objednavka">
+                      <p>Objednat</p>
+                    </Link>
                   </div>
                 </div>
                 <div className="column">
@@ -508,7 +558,9 @@ export default function Nav() {
                   </Link>
                   <li className="items-center text-xl">Model 3</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/page3">
+                      <p>Více</p>
+                    </Link>{" "}
                     <p>Objednat</p>
                   </div>
                 </div>
@@ -524,7 +576,9 @@ export default function Nav() {
                   </Link>
                   <li className="items-center text-xl">Model X</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/pageX">
+                      <p>Více</p>
+                    </Link>{" "}
                     <p>Objednat</p>
                   </div>
                 </div>
@@ -539,7 +593,9 @@ export default function Nav() {
                   </Link>
                   <li className="items-center text-xl">Model Y</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/pageY">
+                      <p>Více</p>
+                    </Link>{" "}
                     <p>Objednat</p>
                   </div>
                 </div>{" "}
@@ -554,7 +610,9 @@ export default function Nav() {
                   </Link>
                   <li className="items-center text-xl"> Cybertruck</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/cybertruck">
+                      <p>Více</p>
+                    </Link>{" "}
                     <p>Objednat</p>
                   </div>
                 </div>{" "}
@@ -576,7 +634,9 @@ export default function Nav() {
               </div>
               <div className="h-72  border-r border-gray-300  "></div>
               <div className="pl-20 font-bolder text-xl text-black">
-                <p className="pb-3">Testovací jízda</p>
+                <Link to="/jizda">
+                  <p className="pb-3">Testovací jízda</p>
+                </Link>
                 <p className="pb-3">Předem nakonfigurovaná vozidla</p>
                 <p className="pb-3">Certifikované ojeté vozy</p>
                 <p className="pb-3">Firemní vozidla</p>
@@ -589,27 +649,36 @@ export default function Nav() {
           <div className="dropdown z-30">
             <button className="dropbtn">Energetická kapacita</button>
             <div className="dropdown-content px-96 py-16">
-              <div className="row flex flex-wrap gap-5 mx-auto">
+              <div className="row flex gap-5 mx-auto">
                 <div className="column">
-                  <img
-                    src={powerwall}
-                    alt="powerwall"
-                    className="w-[184px] h-[103px] items-center"
-                  ></img>{" "}
+                  <Link to="/powerwall">
+                    <img
+                      src={megapack}
+                      alt="powerwall"
+                      className="w-[184px] h-[103px] items-center"
+                    ></img>{" "}
+                  </Link>
                   <li>Powerwall</li>
-                  <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
-                  </div>
+                  <Link to="/powerwall">
+                    <div className="flex flex-row gap-5 text-secondary underline justify-center">
+                      <p>Více</p>
+                    </div>
+                  </Link>
                 </div>
                 <div className="column">
-                  <img
-                    src={megapack}
-                    alt="megapack"
-                    className="w-[184px] h-[103px] items-center"
-                  ></img>{" "}
+                  <Link to="/megapack">
+                    <img
+                      src={powerwall}
+                      alt="megapack"
+                      className="w-[184px] h-[103px] items-center"
+                    ></img>{" "}
+                  </Link>
+
                   <li>Megapack</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/megapack">
+                      <p>Více</p>
+                    </Link>
                   </div>
                 </div>
                 <div className="h-56  border-r border-gray-300  "></div>
@@ -627,43 +696,59 @@ export default function Nav() {
             <div className="dropdown-content px-56 py-16">
               <div className="row flex gap-5 mx-auto">
                 <div className="column">
-                  <img
-                    src={charging}
-                    alt="charging"
-                    className="w-[184px] h-[103px] items-center"
-                  ></img>{" "}
+                  <Link to="/charging">
+                    <img
+                      src={charging}
+                      alt="charging"
+                      className="w-[184px] h-[103px] items-center"
+                    ></img>{" "}
+                  </Link>
                   <li>Nabíjení</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/charging">
+                      <p>Více</p>
+                    </Link>
                   </div>
                 </div>
                 <div className="column">
-                  <img
-                    src={homecharging}
-                    alt="homecharging"
-                    className="w-[184px] h-[103px] items-center"
-                  ></img>{" "}
+                  <Link to="/homecharging">
+                    <img
+                      src={homecharging}
+                      alt="homecharging"
+                      className="w-[184px] h-[103px] items-center"
+                    ></img>{" "}
+                  </Link>
                   <li>Domácí nabíjení</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
+                    <Link to="/homecharging">
+                      <p>Více</p>
+                    </Link>
                     <p>Obchod</p>
                   </div>
                 </div>
                 <div className="column">
-                  <img
-                    src={supercharging}
-                    alt="supercharging"
-                    className="w-[184px] h-[103px] items-center"
-                  ></img>{" "}
+                  <Link to="/supercharging">
+                    <img
+                      src={supercharging}
+                      alt="supercharging"
+                      className="w-[184px] h-[103px] items-center"
+                    ></img>{" "}
+                  </Link>
                   <li>Supercharging</li>
                   <div className="flex flex-row gap-5 text-secondary underline justify-center">
-                    <p>Více</p>
-                    <p>Najít</p>
+                    <Link to="/supercharging">
+                      <p>Více</p>
+                    </Link>
+                    <Link to="/find">
+                      <p>Najít</p>
+                    </Link>
                   </div>
                 </div>
                 <div className="h-56  border-r border-gray-300  "></div>
                 <div className="pl-20 font-bolder text-xl text-black">
-                  <p className="pb-3">Plánovač tras</p>
+                  <Link to="/trasa">
+                    <p className="pb-3">Plánovač tras</p>
+                  </Link>
                   <p className="pb-3">Hlasování o stanici Supercharger</p>
                   <p className="pb-3">Provozujte Supercharger stanice</p>
                   <p>Hostitelské nabíječky Wall Connector</p>
@@ -674,33 +759,75 @@ export default function Nav() {
           {/* column with charging end */}
           {/* column with info start */}
           <div className="dropdown z-30">
-            <button className="dropbtn">Informace</button>
+            <Link to="/info">
+              <button className="dropbtn">Informace</button>
+            </Link>
             <div className="dropdown-content px-96 py-10">
               <div className="row flex gap-10 text-black text-xl font-bolder mx-auto">
                 <div className="column">
                   <h3 className="pb-7 text-secondary">Materiály</h3>
-                  <p className="pb-4"> Testovací jízda</p>
-                  <p className="pb-4">Příběhy zákazníků</p>
-                  <p className="pb-4">Události</p>
-                  <p>Videoprůvodci</p>
+                  <Link to="/jizda">
+                    <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Testovací jízda
+                    </p>
+                  </Link>
+                  <Link to="/pribehy">
+                    <p class="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Příběhy zákazníků
+                    </p>
+                  </Link>
+                  <Link to="/udalosti">
+                    <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Události
+                    </p>
+                  </Link>
+                  <Link to="/videopruvodci">
+                    <p className="transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Videoprůvodci
+                    </p>
+                  </Link>
                 </div>
                 <div className="column">
                   <h3 className="pb-7 text-secondary">
                     Služby zjišťování polohy
                   </h3>
-                  <p className="pb-4"> Kde nás najdete</p>
-                  <p className="pb-4">Plánovač tras</p>
-                  <p className="pb-4">
-                    Najít certifikovaného instalačního technika
-                  </p>
-                  <p>Najít opravnu karosérií</p>
+                  <Link to="/find">
+                    <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      {" "}
+                      Kde nás najdete
+                    </p>
+                  </Link>
+                  <Link to="/trasa">
+                    <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Plánovač tras
+                    </p>
+                  </Link>
+                  <Link to="/technik">
+                    <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Najít certifikovaného instalačního technika
+                    </p>
+                  </Link>
+                  <Link to="/karoserie">
+                    <p className="transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                      Najít opravnu karosérií
+                    </p>
+                  </Link>
                 </div>
                 <div className="column">
                   {" "}
                   <h3 className="pb-7 text-secondary">Company</h3>
-                  <p className="pb-4"> Více informací</p>
-                  <p className="pb-4">Kariéra</p>
-                  <p>Investoři</p>
+                  <Link to="/info">
+                    <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4 ">
+                      {" "}
+                      Více informací
+                    </p>
+                  </Link>
+                  <p className="pb-4 transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                    Kariéra
+                  </p>
+                  <p className="transition-all duration-500 ease-in-out hover:underline hover:underline-offset-4">
+                    Investoři
+                  </p>
                 </div>
               </div>
             </div>
@@ -712,35 +839,43 @@ export default function Nav() {
             <div className="dropdown-content px-80 py-10">
               <div className="row flex gap-5 text-xl mx-auto">
                 <div className="column ">
-                  <img
-                    src={homecharging}
-                    alt="homecharging"
-                    className="w-[184px] h-[103px] items-center text-xl"
-                  ></img>{" "}
+                  <Link to="/storecharging">
+                    <img
+                      src={homecharging}
+                      alt="homecharging"
+                      className="w-[184px] h-[103px] items-center text-xl"
+                    ></img>{" "}
+                  </Link>
                   <li>Nabíjení</li>
                 </div>
                 <div className="column">
-                  <img
-                    src={vehicle}
-                    alt="vehicle"
-                    className="w-[184px] h-[103px] items-center text-xl"
-                  ></img>{" "}
+                  <Link to="/prislusenstvi">
+                    <img
+                      src={vehicle}
+                      alt="vehicle"
+                      className="w-[184px] h-[103px] items-center text-xl"
+                    ></img>{" "}
+                  </Link>
                   <li>Příslušenství vozidla</li>
                 </div>
                 <div className="column">
-                  <img
-                    src={hat}
-                    alt="hat"
-                    className="w-[184px] h-[103px] items-center text-xl"
-                  ></img>{" "}
+                  <Link to="/clothes">
+                    <img
+                      src={hat}
+                      alt="hat"
+                      className="w-[184px] h-[103px] items-center text-xl"
+                    ></img>{" "}
+                  </Link>
                   <li>Oblečení</li>
                 </div>
                 <div className="column">
-                  <img
-                    src={batoh}
-                    alt="batoh"
-                    className="w-[184px] h-[103px] items-center text-xl"
-                  ></img>{" "}
+                  <Link to="/lifestyle">
+                    <img
+                      src={batoh}
+                      alt="batoh"
+                      className="w-[184px] h-[103px] items-center text-xl"
+                    ></img>{" "}
+                  </Link>
                   <li>Životní styl</li>
                 </div>
               </div>
@@ -749,7 +884,7 @@ export default function Nav() {
         </div>
         {/* column with store end  */}
         {/* right navbar start */}
-        <div className="md:flex hidden text-lightWhite  hover:text-black  ">
+        <div className="md:flex hidden text-lightWhite  hover:text-black ">
           <Link to="/create">
             <button className="btn-modal px-3">
               <AiOutlineQuestionCircle />
@@ -826,58 +961,6 @@ export default function Nav() {
           toggleInfoModal={toggleInfoModal}
         />
       )}
-
-      {/* {mobileMenuOpen && (
-        <div className="md:hidden bg-white ">
-          <ul className="flex flex-col  space-y-10 text-black items-start  w-screen h-screen mt-20 pl-10 text-xl font-medium">
-            <button onClick={toggleVozyModal}>
-              <AiOutlineRight />
-              <div className="flex flex-row gap-[540px]">
-                <li>Vozy </li>
-              </div>
-            </button>
-            <button onClick={toggleEnergyModal}>
-              <div className="flex flex-row gap-[400px]">
-                <li>Energetická kapacita </li>
-                <AiOutlineRight />
-              </div>
-            </button>
-            <button onClick={toggleChargingModal}>
-              <div className="flex flex-row gap-[510px]">
-                <li>Nabíjení </li>
-                <AiOutlineRight />
-              </div>
-            </button>{" "}
-            <button onClick={toggleInfoModal}>
-              <div className="flex flex-row gap-[490px]">
-                <li>Informace </li>
-                <AiOutlineRight />
-              </div>
-            </button>{" "}
-            <Link to="/obchod">
-              <li>Obchod </li>
-            </Link>
-            <Link to="/create">
-              {" "}
-              <li>Podpora</li>
-            </Link>
-            <div
-              className="flex flex-row gap-4 items-center justify-center
-            "
-            >
-              <AiOutlineGlobal size={24} />
-              <p>Česko</p>
-            </div>
-            <div
-              className="flex flex-row gap-4 items-center justify-center
-            "
-            >
-              <AiOutlineUser size={24} />
-              <p>Účet</p>
-            </div>
-          </ul>
-        </div>
-      )} */}
     </div>
   );
 }

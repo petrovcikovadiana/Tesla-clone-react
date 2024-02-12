@@ -9,7 +9,11 @@ export default function Create() {
     <div>
       <NavSupport />
       <div className="relative bg-white h-screen">
-        <img src={Img1} alt="house" className="md:h-[280px] md:w-[1600px]" />
+        <img
+          src={Img1}
+          alt="house"
+          className="md:h-[280px] md:w-[1600px] xxl:h-[450px] xxl:w-[2860px]"
+        />
         <div className="absolute top-24 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <input
             type="email"

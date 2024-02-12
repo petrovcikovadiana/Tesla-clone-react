@@ -13,6 +13,7 @@ import sed from "../assets/sed.svg";
 import eye from "../assets/eye.svg";
 import kufor from "../assets/kufor.svg";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
 
 function PageY() {
   return (
@@ -37,9 +38,11 @@ function PageY() {
         <button className="bg-opacity-80 bg-lightWhite text-lightBlack text-base rounded-md py-2 w-[500px] md:w-[250px] tracking-wider">
           Objednat
         </button>
-        <button className=" bg-opacity-65 bg-transparent text-lightWhite border-4  text-base rounded-md py-2 w-[500px] md:w-[250px] tracking-wider">
-          Testovací jízda
-        </button>
+        <Link to="/jizda">
+          <button className=" bg-opacity-65 bg-transparent text-lightWhite border-4  text-base rounded-md py-2 w-[500px] md:w-[250px] tracking-wider">
+            Testovací jízda
+          </button>
+        </Link>
       </div>
       <div
         className="h-screen w-screen flex text-5xl z-20  "

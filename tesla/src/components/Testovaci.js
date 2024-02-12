@@ -1,5 +1,6 @@
 import React from "react";
 import myVideo from "../assets/Experience.mp4";
+import { Link } from "react-router-dom";
 
 function Testovaci() {
   return (
@@ -9,10 +10,11 @@ function Testovaci() {
         <p className="text-lg underline">
           Naplánujte si testovací jízdu ještě dnes
         </p>
-
-        <button className="bg-opacity-65 border-4 border-lightWhite bg-transparent text-lightWhite text-sm rounded-md py-2 w-[500px] md:w-[280px] tracking-wider mx-auto mt-[450px] md:mt-[450px] xl:mt-[450px] xxl:mt-[600px]">
-          Testovací jízda
-        </button>
+        <Link to="/jizda">
+          <button className="bg-opacity-65 border-4 border-lightWhite bg-transparent text-lightWhite text-sm rounded-md py-2 w-80 md:w-80 tracking-wider mx-auto mt-[450px] md:mt-[400px] xl:mt-[450px] xxl:mt-[600px]">
+            Testovací jízda
+          </button>
+        </Link>
       </div>
       <video
         className="w-full h-full object-cover "

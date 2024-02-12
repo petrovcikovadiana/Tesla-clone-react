@@ -2,12 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 html {
   scroll-snap-type: y mandatory;
 }
 
 .section {
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 body.active-modal {
@@ -66,6 +73,14 @@ body.active-modal {
   object-position: center; /* This centers the image horizontally and crops from the top */
   width: 100%; /* Set the width to 100% to fill the container horizontally */
   height: 500px;
+}
+
+.imgB {
+  display: block;
+  object-fit: cover; /* This makes the image cover the container */
+  object-position: center; /* This centers the image horizontally and crops from the top */
+  width: 100%; /* Set the width to 100% to fill the container horizontally */
+  height: 600px;
 }
 
 .vertical-line {
@@ -187,7 +202,7 @@ body.active-modal {
   height: 100vh;
   background: white;
   display: flex;
-
+  overflow: auto;
   z-index: 50;
 }
 
@@ -196,13 +211,6 @@ body.active-modal {
     width: 100%;
     height: auto;
   }
-}
-
-body {
-  margin: 0;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
 @layer base {
